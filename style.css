@@ -1,0 +1,224 @@
+p{
+  color: black;
+  font-size: medium; 
+  text-align: justify;
+  word-break: break-all;
+  padding: 5% 10% 5%;
+  border: 1px; 
+  display: block; 
+  font-family: 'Atma'; 
+  max-height: 525px; /* used to me min-height*/
+  overflow: hidden;
+
+}
+
+.paper{
+  background: whitesmoke;
+  display: block;
+  margin-left: 23%;
+  margin-right: 23%;
+  margin-bottom: -10%;
+  margin-top: -5px;
+  height: 600px;
+  cursor: text;
+  
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 120px;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 10px;
+  cursor: default;
+  margin: auto;
+  font-family: 'Coda Caption';
+  background: linear-gradient(
+            to right, rgb(193, 41, 41), rgb(202, 202, 81), rgb(65, 65, 204));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: left;
+}
+
+.sidebar div {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 40px;
+  vertical-align: -70px;
+}
+
+.rightsidebar {
+  height: 100%;
+  width: 230px;
+  position: fixed;
+  z-index: 2;
+  top: 150px;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+
+.header{
+  text-align: center;
+  font-family: "Lucida Console", "Courier New", monospace;
+  background: #bab3cc;
+  padding: 1px;
+  color: azure;
+  outline: 2px solid black;
+  outline-style: outset;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 30px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  font-family: 'Coda Caption';
+  margin-top: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+  background-color: rgb(37, 37, 37);
+}
+
+.button1 {
+  border: 2px solid rgb(193, 41, 41);
+  padding: 30px 61px
+}
+
+.button1:hover
+{
+background-image: url("images/fire.png");
+background-color: rgb(193, 41, 41);
+}
+
+.button2 {
+  border: 2px solid rgb(202, 202, 81)
+}
+
+.button2:hover
+{
+background-image:none;
+background-color: rgb(202, 202, 81);
+color: black;
+}
+
+.button3 {
+  border: 2px solid rgb(65, 65, 204);
+  padding: 30px 43px;
+}
+
+.button3:hover
+{
+background-image:none;
+background-color: rgb(65, 65, 204);
+}
+
+body{
+  background:#111;
+}
+
+.container{
+  margin:40px auto;
+  margin-inline-start: 30px;
+  width: 2%;
+  height: 60px;
+  left: 425px;
+  position: relative;
+  transform-origin: center bottom;
+  animation-name: flicker;
+  animation-duration:3ms;
+  animation-delay:200ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  display: inline-block;
+  z-index: 2;
+}
+
+
+.lineup{
+  margin-left: 10%;
+}
+
+.flame{
+  bottom:0;
+  position:absolute;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  transform:rotate(-45deg) scale(1.5,1.5);
+}
+
+.yellow{
+  left:15px; 
+  width: 60px;
+  height: 60px;
+  background:gold;
+  box-shadow: 0px 0px 9px 4px gold;
+
+}
+
+.orange{
+  left:10px; 
+  width: 80px;
+  height: 80px;
+  background:orange;
+  box-shadow: 0px 0px 9px 4px orange;
+}
+
+.red{
+  left:5px;
+  width: 100px;
+  height: 100px;
+  background:OrangeRed;
+  box-shadow: 0px 0px 5px 4px OrangeRed;
+}
+
+.white{
+  left:15px; 
+  bottom:-4px;
+  width: 60px;
+  height: 60px;
+  background:white;
+  box-shadow: 0px 0px 9px 4px white;
+}
+
+.circle{
+  border-radius: 50%;
+  position:absolute;  
+}
+
+.blue{
+  width:40px;
+  height: 40px;
+  left:25px;
+  bottom:-25px; 
+  background: SlateBlue;
+  box-shadow: 0px 0px 15px 10px SlateBlue;
+}
+
+.black{
+  width: 80px;
+  height: 80px;
+  left:10px;
+  bottom:-60px;  
+  background: black;
+  box-shadow: 0px 0px 15px 10px black;
+}
+
+@keyframes flicker{
+  0%   {transform: rotate(-1deg);}
+  20%  {transform: rotate(1deg);}
+  40%  {transform: rotate(-1deg);}
+  60%  {transform: rotate(1deg) scaleY(1.04);}
+  80%  {transform: rotate(-2deg) scaleY(0.92);}
+  100% {transform: rotate(1deg);}
+}

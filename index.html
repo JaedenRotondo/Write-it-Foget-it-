@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Write It! Forget It!</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Atma' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Coda Caption:800' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet'>
+  </head>
+  <body>
+ <body onLoad="displayFire()">
+  <div class="sidebar">
+    <div>Write What's On Your Mind! Go Crazy, Go Stupid!</div>
+  </div>
+
+  <div class="rightsidebar"
+    <div>
+      <button class="button button1"  onclick="displayFire(); paperBurn();">Fire</button>
+      <button class="button button2">Pacman</button>
+      <button class="button button3">Boink</button>
+    </div>
+  </div>
+
+<!-- an ordinary text box -->
+<div class="horizontalLayout">
+<br>
+<div class = paper id="sheet">
+<p id="demo"></p>
+</div>
+</div>
+
+<!-- Fire from Adrian Payne -->
+<div class="lineup">
+<div class="container">
+  <div class="red flame" id="red"></div>
+  <div class="orange flame" id="orange"></div>
+  <div class="yellow flame" id="yellow"></div>
+  <div class="white flame" id="white"></div>
+  <div class="blue circle" id="blue"></div>
+  <div class="black circle" id="black"></div>
+</div>
+
+<div>
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput").value;
+  document.getElementById("demo").innerHTML = x;
+}
+
+function paperBurn(){
+  var x = document.getElementById("sheet");
+  for(var i = 255; i > 0; i--){
+    delay(3000).then(() =>
+    x.style.background = "rgb("+i+","+i+","+i+")");
+    i=i-1; 
+  }
+}
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time));
+}
+
+
+
+function displayFire() {
+  x = document.getElementById("red");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  x = document.getElementById("orange");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  x = document.getElementById("yellow");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  x = document.getElementById("white");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  x = document.getElementById("blue");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  x = document.getElementById("black");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  
+}
+
+
+document.addEventListener('keypress', (event) => {
+  var name = event.key;
+  var code = event.code;
+  // Alert the key name and key code on keydown
+  if(name != "Enter"){
+    document.getElementById("demo").innerHTML += name;
+  }
+  
+}, false);
+document.addEventListener('keydown', function(event) {
+    const key = event.key; // const {key} = event; ES6+
+    var name = event.key;
+    if (key === "Delete" || key === "Backspace") {
+        document.getElementById("demo").innerHTML = document.getElementById('demo').innerHTML.slice(0,-1);
+    }
+    if (key === "Enter"){
+      document.getElementById("demo").innerHTML += "<br> ";
+    }
+});
+
+
+</script>
+  </body>
+</html>
